@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reflected XSS Demo</title>
+</head>
+<body>
+
+<h2>Welcome Page</h2>
+<div id="output"></div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+
+    if (name) {
+        document.getElementById("output").innerHTML =
+            "<h3>Hello " + name + "</h3>";
+    }
+</script>
+
+</body>
+</html>
