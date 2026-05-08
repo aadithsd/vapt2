@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<unistd.h>
+
+int main()
+{
+	char m1[]="welcome to vapt lab.\n";
+	write(1,m1,sizeof(m1)-1);
+	char m2[]="system call.\n";
+	write(1,m2,sizeof(m2)-1);
+	return 0;
+}
+
+
+
